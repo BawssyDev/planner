@@ -1,0 +1,107 @@
+/* Backdrop overlay */
+.dialog-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 999; /* Make sure it overlays everything */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px; /* padding so dialog isn't flush on edges on mobile */
+}
+
+/* Dialog modal centered with fixed position */
+.dialog-modal {
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  padding: 28px 32px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  /* for smooth scroll on iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Form labels */
+.dialog-modal label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  text-align: left;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Inputs and selects */
+.dialog-modal input[type="text"],
+.dialog-modal select {
+  width: 100%;
+  margin-bottom: 16px;
+  margin-top: 4px;
+  font-size: 1.1rem;
+  padding: 10px 12px;
+  border: 1.8px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.dialog-modal input[type="text"]:focus,
+.dialog-modal select:focus {
+  border-color: #2980b9;
+  outline: none;
+  box-shadow: 0 0 6px rgba(41, 128, 185, 0.5);
+}
+
+/* Actions container */
+.dialog-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* Buttons */
+.dialog-modal button {
+  min-width: 90px;
+  padding: 12px 0;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #2980b9;
+  color: white;
+  box-shadow: 0 4px 8px rgba(41, 128, 185, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dialog-modal button:hover,
+.dialog-modal button:focus {
+  background: #1f6391;
+  box-shadow: 0 6px 12px rgba(31, 99, 145, 0.6);
+  outline: none;
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 700px) {
+  .dialog-backdrop {
+    padding: 12px;
+  }
+  .dialog-modal {
+    max-width: 100%;
+    max-height: 85vh;
+    padding: 20px 24px;
+  }
+  .dialog-modal button {
+    min-width: 100%;
+  }
+}

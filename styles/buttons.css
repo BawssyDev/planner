@@ -1,0 +1,39 @@
+.file-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.file-buttons button {
+  padding: 8px 16px;
+  font-size: 1em;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.file-buttons button:hover {
+  background-color: #1f6394;
+}
+
+.add-holder-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.add-holder-btn:hover {
+  background: #eaf1fb;
+}
