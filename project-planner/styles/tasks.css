@@ -1,0 +1,74 @@
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-bottom: 8px;
+  min-height: 60px;
+}
+
+.task {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(44,62,80,0.09);
+  padding: 12px 18px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0;
+  box-sizing: border-box;
+  height: 120px;
+  justify-content: space-between;
+  cursor: grab;
+  opacity: 1;
+  transition: box-shadow 0.2s, opacity 0.2s;
+}
+
+.task .status {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.task .priority {
+  font-size: 0.9em;
+  color: #888;
+  margin-left: 8px;
+}
+
+.task .actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.task-cog-btn,
+.task-x-btn {
+  background: none;
+  border: none;
+  padding: 0 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  transition: background 0.2s;
+}
+
+.task-cog-btn:hover,
+.task-x-btn:hover {
+  background: #eaf1fb;
+}
+
+@media (max-width: 700px) {
+  .tasks {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
