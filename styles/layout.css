@@ -3,6 +3,9 @@ body {
   background: #f4f6fa;
   margin: 0;
   padding: 0;
+  font-size: 16px; /* Base size for readability */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container {
@@ -10,26 +13,27 @@ body {
   margin: 40px auto;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   padding: 32px;
 }
 
 h1 {
   text-align: center;
-  font-size: 2.5em;
-  margin-bottom: 0.2em;
+  font-size: clamp(1.8rem, 4vw, 2.5rem); /* Responsive font size */
+  margin-bottom: 0.4em;
   color: #2c3e50;
 }
 
 h2 {
   text-align: left;
-  font-size: 1.5em;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   margin-bottom: 1em;
   color: #34495e;
 }
 
 .task-header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1em;
@@ -43,8 +47,20 @@ h2 {
   margin-top: 24px;
 }
 
+/* Responsive adjustments */
 @media (max-width: 700px) {
   .container {
-    padding: 12px;
+    padding: 16px;
+    margin: 20px 12px;
+  }
+
+  .task-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .flow {
+    gap: 24px;
   }
 }

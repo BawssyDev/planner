@@ -9,24 +9,21 @@
 .task {
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(44,62,80,0.09);
-  padding: 12px 18px;
-  min-width: 0;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.09);
+  padding: 14px 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 0;
-  box-sizing: border-box;
-  height: 120px;
   justify-content: space-between;
+  height: 130px;
+  box-sizing: border-box;
   cursor: grab;
-  opacity: 1;
-  transition: box-shadow 0.2s, opacity 0.2s;
+  transition: box-shadow 0.2s ease;
+  font-size: 1rem;
 }
 
 .task .status {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   margin-right: 8px;
   display: inline-block;
@@ -40,25 +37,26 @@
 }
 
 .task .actions {
-  margin-top: 8px;
   display: flex;
   gap: 10px;
   align-items: center;
+  margin-top: 8px;
 }
 
 .task-cog-btn,
 .task-x-btn {
   background: none;
   border: none;
-  padding: 0 4px;
+  padding: 0;
   cursor: pointer;
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  height: 28px;
-  width: 28px;
-  transition: background 0.2s;
+  transition: background 0.2s ease;
+  font-size: 1.2rem;
 }
 
 .task-cog-btn:hover,
@@ -69,6 +67,18 @@
 @media (max-width: 700px) {
   .tasks {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 14px;
+  }
+
+  .task {
+    height: auto;
+    font-size: 1rem;
+    padding: 16px;
+  }
+
+  .task-cog-btn,
+  .task-x-btn {
+    height: 40px;
+    width: 40px;
   }
 }

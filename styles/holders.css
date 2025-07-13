@@ -1,40 +1,45 @@
 .holder {
   background: #eaf1fb;
-  border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 1px 4px rgba(44,62,80,0.07);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.07);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Header row: title and action buttons */
 .holder-title-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .holder-title {
-  font-weight: bold;
-  font-size: 1.2em;
+  font-weight: 700;
+  font-size: 1.2rem;
   color: #2980b9;
   flex: 1;
   text-align: left;
+  word-break: break-word;
 }
 
+/* Action buttons */
 .holder-cog-btn,
 .holder-add-btn,
 .holder-x-btn {
   background: none;
   border: none;
-  padding: 0 4px;
+  padding: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  height: 32px;
-  width: 32px;
-  transition: background 0.2s;
+  height: 36px;
+  width: 36px;
+  transition: background 0.2s ease;
 }
 
 .holder-cog-btn:hover,
@@ -43,7 +48,32 @@
   background: #d6eaff;
 }
 
+/* Visual cue when dragging */
 .holder.drag-over {
   background: #d6eaff;
   border: 2px dashed #2980b9;
+}
+
+/* Mobile adjustments */
+@media (max-width: 700px) {
+  .holder {
+    padding: 16px;
+  }
+
+  .holder-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .holder-title {
+    font-size: 1.1rem;
+  }
+
+  .holder-cog-btn,
+  .holder-add-btn,
+  .holder-x-btn {
+    height: 34px;
+    width: 34px;
+  }
 }
