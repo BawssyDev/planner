@@ -54,26 +54,27 @@
   border: 2px dashed #2980b9;
 }
 
-/* Mobile adjustments */
 @media (max-width: 700px) {
   .holder {
-    padding: 16px;
+    padding: 18px;
   }
 
   .holder-title-row {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    align-items: stretch;
+    gap: 12px;
   }
 
   .holder-title {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    text-align: left;
   }
 
   .holder-cog-btn,
   .holder-add-btn,
   .holder-x-btn {
-    height: 34px;
-    width: 34px;
+    height: 44px;
+    width: 44px;
+    font-size: 1.2rem;
   }
 }

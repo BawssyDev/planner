@@ -90,7 +90,6 @@
   outline: none;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 700px) {
   .dialog-backdrop {
     padding: 12px;
@@ -102,6 +101,16 @@
     padding: 20px 20px;
   }
 
+  .dialog-modal label {
+    font-size: 1.05rem;
+  }
+
+  .dialog-modal input[type="text"],
+  .dialog-modal select {
+    font-size: 1.15rem;
+    padding: 12px;
+  }
+
   .dialog-actions {
     flex-direction: column;
     gap: 10px;
@@ -109,6 +118,9 @@
 
   .dialog-modal button {
     width: 100%;
+    font-size: 1.1rem;
+    padding: 14px 0;
     flex: unset;
   }
 }
+

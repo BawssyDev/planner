@@ -72,13 +72,23 @@
 
   .task {
     height: auto;
+    font-size: 1.05rem;
+    padding: 18px 16px;
+  }
+
+  .task .priority {
     font-size: 1rem;
-    padding: 16px;
   }
 
   .task-cog-btn,
   .task-x-btn {
-    height: 40px;
-    width: 40px;
+    height: 44px;
+    width: 44px;
+    font-size: 1.3rem;
+  }
+
+  .task .status {
+    width: 18px;
+    height: 18px;
   }
 }

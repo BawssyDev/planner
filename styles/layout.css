@@ -47,11 +47,18 @@ h2 {
   margin-top: 24px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 700px) {
   .container {
     padding: 16px;
-    margin: 20px 12px;
+    margin: 16px 8px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.3em;
   }
 
   .task-header {
@@ -60,7 +67,27 @@ h2 {
     gap: 8px;
   }
 
+  .file-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .file-buttons button {
+    font-size: 1.1em;
+    padding: 12px;
+  }
+
   .flow {
-    gap: 24px;
+    gap: 20px;
+  }
+
+  .add-holder-btn {
+    height: 44px;
+    width: 44px;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
   }
 }
